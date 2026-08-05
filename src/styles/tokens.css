@@ -1,0 +1,148 @@
+/* ---------------------------------------------------------------------------
+   Dune & Bean — design tokens
+   ---------------------------------------------------------------------------
+   Single source of truth for colour, type, space, radius, shadow and motion.
+   Components reference these variables (or the Tailwind utilities mapped from
+   them in globals.css). No raw hex values in component files.
+
+   Direction: the roastery in Al Quoz at night. A warm brown-black canvas (not
+   neutral near-black), ember gold from the roaster drum, pistachio as the Gulf
+   signal. Structure borrows from the trade's own paper: bag labels and
+   thermal-printer tickets.
+--------------------------------------------------------------------------- */
+
+:root {
+  /* --- Canvas: warm brown-black -------------------------------------- */
+  --db-roast-950: #100c09; /* page */
+  --db-roast-900: #16110d; /* page, raised band */
+  --db-roast-850: #1a1511; /* inset wells */
+  --db-roast-800: #1f1913; /* cards, drum */
+  --db-roast-750: #261e17; /* card hover */
+  --db-roast-700: #2e251c; /* seams, hairlines */
+  --db-roast-600: #3f3327; /* strong border, control edge */
+  --db-roast-500: #554636; /* disabled edge */
+
+  /* --- Chaff: warm neutrals for type --------------------------------- */
+  --db-chaff-50: #f2ebdf; /* primary text */
+  --db-chaff-100: #e2d8c8;
+  --db-chaff-200: #cdbfab;
+  --db-chaff-300: #b6a693;
+  --db-chaff-400: #9c8b78; /* muted text (AA on --db-roast-950) */
+  --db-chaff-600: #6d6053;
+
+  /* --- Ember: the roaster glow. Primary accent. ---------------------- */
+  --db-ember-200: #fbe0b0;
+  --db-ember-300: #f7c66e;
+  --db-ember-400: #f4b246;
+  --db-ember-500: #f0a22e; /* brand */
+  --db-ember-600: #d4861a;
+  --db-ember-800: #6b430c;
+  --db-ember-950: #2a1a05; /* tinted surface */
+
+  /* --- Pistachio: the Gulf signal. Secondary accent, "ready"/"in". --- */
+  --db-pistachio-200: #dcefc2;
+  --db-pistachio-300: #c2e09b;
+  --db-pistachio-500: #9dc26b;
+  --db-pistachio-700: #5f7f3c;
+  --db-pistachio-950: #1d2712;
+
+  /* --- Signal ------------------------------------------------------- */
+  --db-danger-300: #f2a094;
+  --db-danger-500: #e2564a;
+  --db-danger-950: #33110d;
+  --db-info-500: #7fa8c9;
+
+  /* --- Drink cross-sections: CSS-only swatches, one per category ----- */
+  /* Top stop is the crema/foam/ice; bottom stop is the liquid body. */
+  --db-cat-espresso-top: #d59148;
+  --db-cat-espresso-bottom: #2b160b;
+  --db-cat-filter-top: #e0b271;
+  --db-cat-filter-bottom: #5a2f13;
+  --db-cat-cold-top: #cfe0e8;
+  --db-cat-cold-bottom: #43261a;
+  --db-cat-tea-top: #d8e79a;
+  --db-cat-tea-bottom: #4c5a1e;
+  --db-cat-bakery-top: #f2d295;
+  --db-cat-bakery-bottom: #7a4a1c;
+  --db-cat-food-top: #d3e0ad;
+  --db-cat-food-bottom: #3f4a26;
+
+  /* --- Type: display / body / data ----------------------------------- */
+  /* Bricolage Grotesque carries the personality — wide, slightly irregular,
+     used only for headings and prices. Inter Tight does the reading. Geist
+     Mono handles every number, code and timestamp (tabular). */
+  /* The --font-db-* variables are emitted by next/font in app/layout.tsx. */
+  --db-family-display: var(--font-db-display), ui-sans-serif, system-ui, sans-serif;
+  --db-family-body: var(--font-db-body), ui-sans-serif, system-ui, sans-serif;
+  --db-family-mono: var(--font-db-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --db-text-2xs: 0.6875rem; /* 11 — mono eyebrows, stamps */
+  --db-text-xs: 0.75rem; /* 12 — chips, table meta */
+  --db-text-sm: 0.8125rem; /* 13 — secondary copy */
+  --db-text-base: 0.9375rem; /* 15 — body */
+  --db-text-lg: 1.0625rem; /* 17 — lead paragraph */
+  --db-text-xl: 1.375rem; /* 22 — card title */
+  --db-text-2xl: 1.75rem; /* 28 — section head */
+  --db-text-3xl: 2.25rem; /* 36 */
+  --db-text-4xl: 3rem; /* 48 */
+  --db-text-5xl: 4rem; /* 64 */
+  --db-text-6xl: 5.25rem; /* 84 — hero */
+
+  --db-leading-flat: 0.95;
+  --db-leading-tight: 1.08;
+  --db-leading-snug: 1.28;
+  --db-leading-normal: 1.55;
+  --db-leading-loose: 1.7;
+
+  --db-weight-regular: 400;
+  --db-weight-medium: 500;
+  --db-weight-semibold: 600;
+  --db-weight-bold: 700;
+  --db-weight-black: 800;
+
+  --db-track-tighter: -0.035em;
+  --db-track-tight: -0.02em;
+  --db-track-normal: 0em;
+  --db-track-wide: 0.06em;
+  --db-track-widest: 0.16em; /* mono eyebrows, label rails */
+
+  /* --- Space: 4px base ----------------------------------------------- */
+  --db-space-1: 0.25rem;
+  --db-space-2: 0.5rem;
+  --db-space-3: 0.75rem;
+  --db-space-4: 1rem;
+  --db-space-5: 1.25rem;
+  --db-space-6: 1.5rem;
+  --db-space-8: 2rem;
+  --db-space-10: 2.5rem;
+  --db-space-12: 3rem;
+  --db-space-16: 4rem;
+  --db-space-20: 5rem;
+  --db-space-24: 6rem;
+  --db-space-32: 8rem;
+
+  --db-container: 78rem;
+  --db-gutter: 1.25rem;
+
+  /* --- Radius: crisp, label-like ------------------------------------- */
+  --db-radius-xs: 2px;
+  --db-radius-sm: 4px;
+  --db-radius-md: 6px;
+  --db-radius-lg: 10px;
+  --db-radius-xl: 14px;
+  --db-radius-pill: 999px;
+
+  /* --- Shadow: depth on dark comes from black, emphasis from ember ---- */
+  --db-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.45);
+  --db-shadow-md: 0 8px 24px -10px rgb(0 0 0 / 0.7);
+  --db-shadow-lg: 0 28px 70px -24px rgb(0 0 0 / 0.8);
+  --db-glow-ember: 0 10px 34px -12px rgb(240 162 46 / 0.4);
+  --db-glow-pistachio: 0 10px 34px -12px rgb(157 194 107 / 0.35);
+
+  /* --- Motion --------------------------------------------------------- */
+  --db-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --db-ease-in-out: cubic-bezier(0.6, 0, 0.2, 1);
+  --db-duration-fast: 120ms;
+  --db-duration-base: 220ms;
+  --db-duration-slow: 480ms;
+}

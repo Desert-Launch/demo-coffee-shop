@@ -1,26 +1,302 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../styles/tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* ---------------------------------------------------------------------------
+   Theme: every Tailwind utility resolves back to a token in styles/tokens.css.
+   The shadcn semantic names (background, card, primary, …) are mapped onto the
+   Dune & Bean palette so the generated primitives inherit the identity.
+--------------------------------------------------------------------------- */
 @theme inline {
+  /* Brand scales — use these directly: bg-roast-800, text-ember-500, … */
+  --color-roast-950: var(--db-roast-950);
+  --color-roast-900: var(--db-roast-900);
+  --color-roast-850: var(--db-roast-850);
+  --color-roast-800: var(--db-roast-800);
+  --color-roast-750: var(--db-roast-750);
+  --color-roast-700: var(--db-roast-700);
+  --color-roast-600: var(--db-roast-600);
+  --color-roast-500: var(--db-roast-500);
+
+  --color-chaff-50: var(--db-chaff-50);
+  --color-chaff-100: var(--db-chaff-100);
+  --color-chaff-200: var(--db-chaff-200);
+  --color-chaff-300: var(--db-chaff-300);
+  --color-chaff-400: var(--db-chaff-400);
+  --color-chaff-600: var(--db-chaff-600);
+
+  --color-ember-200: var(--db-ember-200);
+  --color-ember-300: var(--db-ember-300);
+  --color-ember-400: var(--db-ember-400);
+  --color-ember-500: var(--db-ember-500);
+  --color-ember-600: var(--db-ember-600);
+  --color-ember-800: var(--db-ember-800);
+  --color-ember-950: var(--db-ember-950);
+
+  --color-pistachio-200: var(--db-pistachio-200);
+  --color-pistachio-300: var(--db-pistachio-300);
+  --color-pistachio-500: var(--db-pistachio-500);
+  --color-pistachio-700: var(--db-pistachio-700);
+  --color-pistachio-950: var(--db-pistachio-950);
+
+  --color-danger-300: var(--db-danger-300);
+  --color-danger-500: var(--db-danger-500);
+  --color-danger-950: var(--db-danger-950);
+
+  /* shadcn semantic surface */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Type */
+  --font-sans: var(--db-family-body);
+  --font-body: var(--db-family-body);
+  --font-display: var(--db-family-display);
+  --font-mono: var(--db-family-mono);
+  --font-heading: var(--db-family-display);
+
+  --text-2xs: var(--db-text-2xs);
+  --text-xs: var(--db-text-xs);
+  --text-sm: var(--db-text-sm);
+  --text-base: var(--db-text-base);
+  --text-lg: var(--db-text-lg);
+  --text-xl: var(--db-text-xl);
+  --text-2xl: var(--db-text-2xl);
+  --text-3xl: var(--db-text-3xl);
+  --text-4xl: var(--db-text-4xl);
+  --text-5xl: var(--db-text-5xl);
+  --text-6xl: var(--db-text-6xl);
+
+  --leading-flat: var(--db-leading-flat);
+  --leading-tight: var(--db-leading-tight);
+  --leading-snug: var(--db-leading-snug);
+  --leading-normal: var(--db-leading-normal);
+  --leading-loose: var(--db-leading-loose);
+
+  --tracking-tighter: var(--db-track-tighter);
+  --tracking-tight: var(--db-track-tight);
+  --tracking-normal: var(--db-track-normal);
+  --tracking-wide: var(--db-track-wide);
+  --tracking-widest: var(--db-track-widest);
+
+  /* Radius */
+  --radius-sm: var(--db-radius-sm);
+  --radius-md: var(--db-radius-md);
+  --radius-lg: var(--db-radius-lg);
+  --radius-xl: var(--db-radius-xl);
+  --radius-2xl: var(--db-radius-xl);
+
+  /* Shadow */
+  --shadow-sm: var(--db-shadow-sm);
+  --shadow-md: var(--db-shadow-md);
+  --shadow-lg: var(--db-shadow-lg);
+  --shadow-ember: var(--db-glow-ember);
+  --shadow-pistachio: var(--db-glow-pistachio);
+
+  /* Layout */
+  --container-page: var(--db-container);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------------------------------------------------------------------------
+   Semantic layer. Dune & Bean ships one committed look — the warm dark
+   roastery. Both :root and .dark carry the same values so shadcn primitives
+   that branch on the dark variant land on the intended surface.
+--------------------------------------------------------------------------- */
+:root,
+.dark {
+  --background: var(--db-roast-950);
+  --foreground: var(--db-chaff-50);
+
+  --card: var(--db-roast-800);
+  --card-foreground: var(--db-chaff-50);
+  --popover: var(--db-roast-850);
+  --popover-foreground: var(--db-chaff-50);
+
+  --primary: var(--db-ember-500);
+  --primary-foreground: var(--db-roast-950);
+
+  --secondary: var(--db-roast-750);
+  --secondary-foreground: var(--db-chaff-100);
+
+  --muted: var(--db-roast-850);
+  --muted-foreground: var(--db-chaff-400);
+
+  --accent: var(--db-roast-750);
+  --accent-foreground: var(--db-chaff-50);
+
+  --destructive: var(--db-danger-500);
+  --destructive-foreground: var(--db-chaff-50);
+
+  --border: var(--db-roast-700);
+  --input: var(--db-roast-600);
+  --ring: var(--db-ember-500);
+
+  --radius: var(--db-radius-lg);
+
+  --sidebar: var(--db-roast-900);
+  --sidebar-foreground: var(--db-chaff-200);
+  --sidebar-primary: var(--db-ember-500);
+  --sidebar-primary-foreground: var(--db-roast-950);
+  --sidebar-accent: var(--db-roast-800);
+  --sidebar-accent-foreground: var(--db-chaff-50);
+  --sidebar-border: var(--db-roast-700);
+  --sidebar-ring: var(--db-ember-500);
+
+  --chart-1: var(--db-ember-500);
+  --chart-2: var(--db-pistachio-500);
+  --chart-3: var(--db-ember-300);
+  --chart-4: var(--db-chaff-400);
+  --chart-5: var(--db-ember-800);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: var(--db-family-body);
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: var(--db-roast-600) transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-size: var(--db-text-base);
+    line-height: var(--db-leading-normal);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--db-family-display);
+    letter-spacing: var(--db-track-tight);
+    line-height: var(--db-leading-tight);
+  }
+
+  /* One visible, consistent focus treatment everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--db-ember-500);
+    outline-offset: 2px;
+    border-radius: var(--db-radius-sm);
+  }
+
+  ::selection {
+    background: var(--db-ember-500);
+    color: var(--db-roast-950);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Every number in this interface is mono and tabular. */
+  .tnum {
+    font-family: var(--db-family-mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+
+  /* Mono eyebrow used on section heads and the label rails. */
+  .db-rail {
+    font-family: var(--db-family-mono);
+    font-size: var(--db-text-2xs);
+    letter-spacing: var(--db-track-widest);
+    text-transform: uppercase;
+    color: var(--db-chaff-400);
+  }
+
+  /* Faint vertical hairline grid — the worksheet under everything. */
+  .db-gridlines {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--db-roast-700) 0 1px,
+      transparent 1px 25%
+    );
+  }
+
+  /* Drink cross-section. Set --swatch-top / --swatch-bottom per category. */
+  .db-swatch {
+    background-image: radial-gradient(
+        120% 90% at 30% 16%,
+        rgb(255 255 255 / 0.3),
+        transparent 58%
+      ),
+      linear-gradient(
+        180deg,
+        var(--swatch-top) 0%,
+        var(--swatch-top) 24%,
+        var(--swatch-bottom) 84%
+      );
+    box-shadow:
+      inset 0 0 0 1px rgb(255 255 255 / 0.09),
+      inset 0 -12px 20px -14px rgb(0 0 0 / 0.9);
+  }
+
+  /* Thermal-ticket bottom edge for the order board. */
+  .db-ticket-edge {
+    --db-notch: 7px;
+    height: var(--db-notch);
+    -webkit-mask-image: radial-gradient(
+      circle at var(--db-notch) 100%,
+      transparent var(--db-notch),
+      #000 calc(var(--db-notch) + 0.5px)
+    );
+    mask-image: radial-gradient(
+      circle at var(--db-notch) 100%,
+      transparent var(--db-notch),
+      #000 calc(var(--db-notch) + 0.5px)
+    );
+    -webkit-mask-size: calc(var(--db-notch) * 2) 100%;
+    mask-size: calc(var(--db-notch) * 2) 100%;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+  }
+
+  /* Perforation between a ticket's head and its body. */
+  .db-perf {
+    border-top: 1px dashed var(--db-roast-600);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
