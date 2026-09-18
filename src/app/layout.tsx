@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Geist_Mono, Inter_Tight } from "next/font/google";
 
 import { Providers } from "./providers";
+import { DemoBar } from "@/components/layout/demo-bar";
 import "./globals.css";
 
 /* Display: Bricolage Grotesque — wide, slightly irregular, carries the
@@ -26,6 +27,8 @@ const mono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Fictional business, invented contact details: never a search result.
+  robots: { index: false, follow: false },
   title: {
     default: "Dune & Bean — a roastery café in Al Quoz",
     template: "%s · Dune & Bean",
@@ -55,6 +58,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <DemoBar demo="Dune & Bean" slug="cafe" />
         <Providers>{children}</Providers>
       </body>
     </html>
