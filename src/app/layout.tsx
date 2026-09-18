@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Geist_Mono, Inter_Tight } from "next/font/google";
 
 import { Providers } from "./providers";
 import { DemoBar } from "@/components/layout/demo-bar";
+import { demoJsonLd, demoMetadata } from "@/lib/desert-launch";
 import "./globals.css";
 
 /* Display: Bricolage Grotesque — wide, slightly irregular, carries the
@@ -27,14 +28,12 @@ const mono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // Fictional business, invented contact details: never a search result.
-  robots: { index: false, follow: false },
   title: {
     default: "Dune & Bean — a roastery café in Al Quoz",
     template: "%s · Dune & Bean",
   },
-  description:
-    "Six origins on bar, ground to order. Order coffee and bakery for pickup in Al Quoz or delivery across Dubai.",
+  // Share preview, robots, canonical host and the link back to the studio.
+  ...demoMetadata(),
 };
 
 export const viewport: Viewport = {
@@ -58,7 +57,11 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <DemoBar demo="Dune & Bean" slug="cafe" />
+        <DemoBar />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(demoJsonLd()) }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>

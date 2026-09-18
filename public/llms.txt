@@ -1,0 +1,41 @@
+# Dune & Bean — a working demo by Desert Launch
+
+> A working demo of a café website with its bar view, by Desert Launch: a 32-item menu with options, order-ahead for pickup or delivery with a time slot, and the ticket board staff run the day from. Fictional café, sample data.
+
+A fictional business: the names, prices, address and phone numbers are invented, and the data is sample data that resets on refresh.
+
+This is one of six live demos published by Desert Launch (https://www.desertlaunch.dev/), a software development company in Cairo, Egypt that builds mobile apps, web platforms, MVPs and internal business systems for clients in Egypt, the Gulf, Europe and the US. The demos exist so a prospective client can try the customer-facing flow and then see it arrive on the staff side. The full list, how to use them and what a real build adds: https://www.desertlaunch.dev/demos/ (Arabic: https://www.desertlaunch.dev/ar/demos/).
+
+## What this demo is
+
+- Kind of business portrayed: café and roastery, set in Dubai.
+- Interface language: English.
+- Everything runs in the browser against an in-memory store. There is no backend, no database, no accounts and no payments; nothing entered is sent anywhere, and a refresh resets the data.
+- The demo is intentionally excluded from search engines (noindex) because it is not a real business.
+
+## What works
+
+- 32-item menu across six categories with size, milk and extras
+- Five-step checkout: pickup or delivery, details, time slot, review, confirmation
+- Ticket board with drag between columns
+- Menu management: create, edit, delete, sold-out, prices
+- Changes on the admin side appear on the public menu immediately
+- Optimistic cancellation with a deliberate ~10% failure to show rollback
+
+## Where to look
+
+- / — home
+- /menu — the menu
+- /checkout — order-ahead
+- /admin — bar overview
+- /admin/orders — ticket board
+- /admin/menu — menu management
+
+## Getting one like this
+
+Any of these would be adapted to a real business's services, prices, hours, languages and brand, on a real database with accounts, payments and hosting where needed. Desert Launch quotes a fixed price in writing after a free scope call. WhatsApp: +20 102 283 8534. Email: abdullah@desertlaunch.dev.
+
+- Studio: https://www.desertlaunch.dev/
+- All demos: https://www.desertlaunch.dev/demos/
+- Source code: https://github.com/Desert-Launch/demo-coffee-shop
+- Studio llms.txt: https://www.desertlaunch.dev/llms.txt
