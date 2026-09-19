@@ -8,7 +8,7 @@ import { RoastCurve } from "@/components/shared/roast-curve";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "A roastery in Al Quoz with a bar at the front. How we buy, roast and grind at Dune & Bean.",
+    "A roastery in Dubai with a bar at the front. How we buy, roast and grind at the Demo Café.",
 };
 
 /** Real specialty-coffee metadata: this is what a bag label actually carries. */
@@ -54,8 +54,8 @@ export default function AboutPage() {
           </h1>
           <div className="mt-7 max-w-xl space-y-4 text-chaff-300">
             <p>
-              Dune &amp; Bean started in 2019 as a 12-kilo drum in a shared unit
-              on street 8, selling bags to three restaurants and anyone who
+              The Demo Café started in 2019 as a 12-kilo drum in a shared unit
+              on Demo Street, selling bags to three restaurants and anyone who
               knocked. The bar came later, and only because people kept turning
               up wanting a cup of what they could smell from the road.
             </p>
@@ -106,7 +106,7 @@ export default function AboutPage() {
         <div className="mt-8 overflow-x-auto rounded-lg border border-roast-700">
           <table className="w-full min-w-[46rem] border-collapse text-left text-sm">
             <caption className="sr-only">
-              Coffee lots currently open at Dune &amp; Bean
+              Coffee lots currently open at the Demo Café
             </caption>
             <thead>
               <tr className="bg-roast-850">

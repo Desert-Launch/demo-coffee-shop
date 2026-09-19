@@ -6,10 +6,10 @@ import type { StaffMember } from "@/types";
 
 /** The demo's stand-in for an auth session. Nothing is checked. */
 export const STAFF_ROSTER: StaffMember[] = [
-  { id: "staff_reem", name: "Reem Al Hosani", role: "Head barista", initials: "RA" },
-  { id: "staff_deniz", name: "Deniz Yilmaz", role: "Bar", initials: "DY" },
-  { id: "staff_joseph", name: "Joseph Mwangi", role: "Roaster", initials: "JM" },
-  { id: "staff_hala", name: "Hala Barakat", role: "Shift lead", initials: "HB" },
+  { id: "staff_reem", name: "Barista 1", role: "Head barista", initials: "B1" },
+  { id: "staff_deniz", name: "Barista 2", role: "Bar", initials: "B2" },
+  { id: "staff_joseph", name: "Roaster 1", role: "Roaster", initials: "R1" },
+  { id: "staff_hala", name: "Shift Lead 1", role: "Shift lead", initials: "S1" },
 ];
 
 interface StaffState {

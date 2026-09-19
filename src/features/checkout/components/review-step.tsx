@@ -69,7 +69,7 @@ export function ReviewStep({
         >
           {type === "delivery"
             ? "Delivery across Dubai"
-            : "Pickup from Warehouse 14, Al Quoz 3"}
+            : "Pickup from 1 Demo Street, Demo District"}
         </Row>
 
         <Row label="Who" editLabel="Edit" onEdit={() => onEditStep("details")}>

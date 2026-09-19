@@ -61,7 +61,7 @@ export function DetailsStep({
             <Input
               id="co-name"
               autoComplete="name"
-              placeholder="Layla Haddad"
+              placeholder="Your name"
               {...fieldAria("co-name", errors.name?.message)}
               {...register("name")}
             />
@@ -121,7 +121,7 @@ export function DetailsStep({
               <Input
                 id="co-area"
                 autoComplete="address-level2"
-                placeholder="Business Bay"
+                placeholder="Demo District"
                 {...fieldAria("co-area", errors.area?.message)}
                 {...register("area")}
               />

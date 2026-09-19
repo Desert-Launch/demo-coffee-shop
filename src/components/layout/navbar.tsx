@@ -42,7 +42,7 @@ export function Navbar() {
             />
             On the hopper · Wadi lot 07 · washed · 1,450 m
           </p>
-          <p className="db-rail">Al Quoz 3 · 06:00—01:00 daily</p>
+          <p className="db-rail">Demo District · 06:00—01:00 daily</p>
         </PageContainer>
       </div>
 
@@ -111,7 +111,7 @@ export function Navbar() {
               className="w-72 border-roast-700 bg-roast-900"
             >
               <SheetHeader>
-                <SheetTitle className="font-display">Dune &amp; Bean</SheetTitle>
+                <SheetTitle className="font-display">Demo Café</SheetTitle>
               </SheetHeader>
               <nav aria-label="Main" className="px-4">
                 <ul className="flex flex-col gap-1">

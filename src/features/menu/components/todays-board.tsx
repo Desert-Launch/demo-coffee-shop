@@ -33,7 +33,7 @@ export function TodaysBoard() {
     <section aria-labelledby="today-heading">
       <SectionHead
         id="today-heading"
-        rail="Today · Al Quoz 3"
+        rail="Today · Demo District"
         title="On the board"
         description="It changes when the roast changes, so it is rarely the same two weeks running."
       />

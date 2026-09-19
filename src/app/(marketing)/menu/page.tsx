@@ -6,7 +6,7 @@ import { CategoryJump, MenuBoard } from "@/features/menu";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Espresso, filter, cold, tea, bakery and kitchen. Prices in AED, ground to order in Al Quoz.",
+    "Espresso, filter, cold, tea, bakery and kitchen. Prices in AED, ground to order in Dubai.",
 };
 
 export default function MenuPage() {

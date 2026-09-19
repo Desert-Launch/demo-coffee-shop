@@ -32,7 +32,7 @@ export function Overview() {
   return (
     <div className="space-y-10">
       <div>
-        <p className="db-rail">Al Quoz 3 · today</p>
+        <p className="db-rail">Demo District · today</p>
         <h2 className="mt-3 text-3xl text-chaff-50">
           Morning, {staff.name.split(" ")[0]}.
         </h2>

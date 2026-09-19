@@ -16,9 +16,9 @@ export function VisitPanel() {
     <section aria-labelledby="visit-heading">
       <SectionHead
         id="visit-heading"
-        rail="Warehouse 14 · street 8 · Al Quoz 3"
+        rail="1 Demo Street · Demo District"
         title="Come and find us"
-        description="Park on street 8. The roller door is usually up — walk in past the drum."
+        description="Park on Demo Street. The roller door is usually up — walk in past the drum."
         action={
           <Button asChild size="lg" className="h-11 px-5">
             <Link href="/menu">
@@ -51,9 +51,9 @@ export function VisitPanel() {
             <div>
               <p className="db-rail">Address</p>
               <p className="mt-3 text-sm text-chaff-300">
-                Warehouse 14, street 8
+                1 Demo Street
                 <br />
-                Al Quoz Industrial 3, Dubai
+                Demo District, Dubai
               </p>
             </div>
           </div>
@@ -63,7 +63,7 @@ export function VisitPanel() {
             <div>
               <p className="db-rail">Bar phone</p>
               <p className="tnum mt-3 text-sm text-chaff-300">
-                +971 4 501 0714
+                +971 4 555 0xxx
               </p>
             </div>
           </div>

@@ -44,7 +44,7 @@ export function Hero() {
       <PageContainer className="relative grid gap-12 py-16 md:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <div className="max-w-2xl">
           <motion.p {...rise(0)} className="db-rail">
-            Roastery and bar · Al Quoz 3 · since 2019
+            Roastery and bar · Demo District · since 2019
           </motion.p>
 
           <motion.h1

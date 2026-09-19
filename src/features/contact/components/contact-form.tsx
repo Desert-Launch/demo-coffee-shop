@@ -56,7 +56,7 @@ export function ContactForm() {
           <Input
             id="contact-name"
             autoComplete="name"
-            placeholder="Layla Haddad"
+            placeholder="Your name"
             {...fieldAria("contact-name", errors.name?.message)}
             {...register("name")}
           />

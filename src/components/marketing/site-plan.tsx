@@ -17,7 +17,7 @@ export function SitePlan({ className }: { className?: string }) {
         viewBox="0 0 320 200"
         fill="none"
         role="img"
-        aria-label="Site plan: Dune and Bean occupies warehouse 14 on street 8, Al Quoz 3, on the corner of street 8 and 4b."
+        aria-label="Site plan: the Demo Café occupies a warehouse on the corner of Demo Street, Demo District."
         className="h-full w-full"
       >
         {/* Blocks */}

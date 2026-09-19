@@ -1,6 +1,6 @@
-# Dune & Bean
+# Demo Café
 
-A frontend-only demo for a fictional specialty café and roastery in Al Quoz, Dubai. It covers the public marketing site, the full ordering flow, and the staff view the bar runs the day from.
+A frontend-only demo for a fictional specialty café and roastery in Dubai. It covers the public marketing site, the full ordering flow, and the staff view the bar runs the day from.
 
 There is no backend, no database and no auth. Everything is in memory.
 

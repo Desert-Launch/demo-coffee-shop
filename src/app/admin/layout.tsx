@@ -7,7 +7,7 @@ import { AdminTopbar } from "@/components/layout/admin-topbar";
 export const metadata: Metadata = {
   title: {
     default: "Bar",
-    template: "%s · Dune & Bean bar",
+    template: "%s · Demo Café bar",
   },
 };
 

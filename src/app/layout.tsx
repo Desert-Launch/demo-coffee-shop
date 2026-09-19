@@ -29,8 +29,8 @@ const mono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dune & Bean — a roastery café in Al Quoz",
-    template: "%s · Dune & Bean",
+    default: "Demo Café — a roastery café in Dubai",
+    template: "%s · Demo Café",
   },
   // Share preview, robots, canonical host and the link back to the studio.
   ...demoMetadata(),

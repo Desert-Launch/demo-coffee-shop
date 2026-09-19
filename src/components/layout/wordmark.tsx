@@ -17,7 +17,7 @@ export function Wordmark({
         className,
       )}
     >
-      Dune <span className="text-ember-500">&amp;</span> Bean
+      Demo <span className="text-ember-500">Café</span>
     </Link>
   );
 }

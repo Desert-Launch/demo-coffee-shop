@@ -17,8 +17,8 @@ export function Footer() {
         <div>
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm text-chaff-400">
-            A roastery with a café attached, not the other way round. Warehouse
-            14, street 8, Al Quoz 3, Dubai.
+            A roastery with a café attached, not the other way round. 1 Demo
+            Street, Demo District, Dubai.
           </p>
           <RoastCurve className="mt-8 h-16 w-48 text-roast-600" />
         </div>

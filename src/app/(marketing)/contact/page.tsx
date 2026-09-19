@@ -9,7 +9,7 @@ import { ContactForm } from "@/features/contact";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Warehouse 14, street 8, Al Quoz 3, Dubai. Hours, phone and a message form for wholesale, events and visits.",
+    "1 Demo Street, Demo District, Dubai. Hours, phone and a message form for wholesale, events and visits.",
 };
 
 export default function ContactPage() {
@@ -32,9 +32,9 @@ export default function ContactPage() {
               <div>
                 <dt className="db-rail">Address</dt>
                 <dd className="mt-2 text-sm text-chaff-300">
-                  Warehouse 14, street 8
+                  1 Demo Street
                   <br />
-                  Al Quoz Industrial 3, Dubai
+                  Demo District, Dubai
                 </dd>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
               <div>
                 <dt className="db-rail">Bar phone</dt>
                 <dd className="tnum mt-2 text-sm text-chaff-300">
-                  +971 4 501 0714
+                  +971 4 555 0xxx
                 </dd>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function ContactPage() {
               <div>
                 <dt className="db-rail">Wholesale</dt>
                 <dd className="mt-2 text-sm text-chaff-300">
-                  beans@duneandbean.example
+                  hello@example.com
                 </dd>
               </div>
             </div>

@@ -8,9 +8,9 @@ export type DemoLang = "en" | "ar";
 export const DEMO = {
   /** Short id the landing site uses; also the subdomain and utm_campaign. */
   slug: "cafe",
-  name: "Dune & Bean",
+  name: "Demo Café",
   /** Latin-only name for the share-preview image, whose default font has no Arabic. */
-  latinName: "Dune & Bean",
+  latinName: "Demo Café",
   url: "https://cafe.demos.desertlaunch.dev",
   /** Language of the bar and the metadata. Typed as the union so the shared
    *  code that handles both languages stays identical in every demo. */

@@ -12,7 +12,7 @@ const CHOICES = [
     value: "pickup" as const,
     icon: Store,
     title: "Pick it up",
-    line: "Warehouse 14, street 8, Al Quoz 3. Ready in about ten minutes.",
+    line: "1 Demo Street, Demo District. Ready in about ten minutes.",
     cost: "No fee",
   },
   {
