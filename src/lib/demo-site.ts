@@ -34,4 +34,28 @@ export const DEMO = {
       "Optimistic cancellation with a deliberate ~10% failure to show rollback"
   ],
   repo: "https://github.com/Desert-Launch/demo-coffee-shop",
+  /** What the demo is, in the words its buyer searches with. The share-preview
+   *  title and the heading of llms.txt. In the demo's own language. */
+  headline: "Café website with order-ahead and a ticket board",
+  /** Who the demo is for: the owner of this kind of business, not the
+   *  business's customers. Emitted as `audience` in the JSON-LD. */
+  audience: "Cafés, coffee shops, bakeries and dark kitchens",
+  /** The Desert Launch page that owns this vertical in search and explains
+   *  what a real build adds. The bar's brand link and the JSON-LD point here,
+   *  so the demo hands its visitors and its context to one indexed page. */
+  industry: {
+    url: "https://www.desertlaunch.dev/industries/restaurants-and-cafes/",
+    name: "Restaurant and café websites by Desert Launch",
+  },
+  /** The bar's call to action, in the demo's language. */
+  cta: "Want this for your café?",
+  /** Routes worth opening, listed in llms.txt. */
+  pages: [
+    { path: "/", label: "home" },
+    { path: "/menu", label: "the menu" },
+    { path: "/checkout", label: "order-ahead" },
+    { path: "/admin", label: "bar overview" },
+    { path: "/admin/orders", label: "ticket board" },
+    { path: "/admin/menu", label: "menu and sold-out control" },
+  ],
 } as const;
