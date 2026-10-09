@@ -2,7 +2,7 @@
 
 A frontend-only demo for a fictional specialty café and roastery in Dubai. It covers the public marketing site, the full ordering flow, and the staff view the bar runs the day from.
 
-There is no backend, no database and no auth. Everything is in memory.
+There is no backend, no database and no auth. Everything is stored in the visitor's own browser.
 
 ## Run it
 
@@ -50,9 +50,11 @@ Other scripts:
 
 Money is stored as an integer number of fils (1 AED = 100 fils) everywhere, and formatted only at the edge in `formatAed`. `computeTotals` in `src/lib/pricing.ts` is the single place subtotal, 5% VAT and the AED 12 delivery fee are calculated, so a total can never disagree with itself.
 
-**Persistence:** add / edit / delete survive navigation for the whole browser session. A hard refresh re-evaluates the module and reseeds the day.
+**Persistence:** `persist.ts` saves the store to `localStorage` after every write and loads it back when the app starts, so an order placed at `/checkout` is still on the board after a refresh or in a new tab. A board open in another tab refetches as soon as the site writes (the providers listen for it). A saved copy is kept for the day it was seeded on; a new day, or a copy whose `version` no longer matches the one in `db.ts`, starts from a fresh seed. **Bump that `version` whenever the shape of the stored data changes.** `persist.ts` is identical in every demo. The cart keeps its lines in `sessionStorage`, restored after mount by the providers, so a half-built order survives a refresh.
 
-**Resetting:** the admin sidebar footer has a **Reset demo data** button. It calls `resetStore()`, clears the cart and invalidates every query.
+**Resetting:** the admin sidebar footer has a **Reset demo data** button. It calls `resetStore()`, which re-seeds and overwrites the saved copy, clears the cart and invalidates every query. A refresh no longer resets anything.
+
+The Desert Launch bar at the top of every page carries the switch between the two sides: **Open the dashboard** on the site, **Back to the site** on the dashboard (`src/components/layout/demo-side-switch.tsx`).
 
 **The deliberate failure:** `cancelOrder` throws roughly 10% of the time (`CANCEL_FAILURE_RATE` in `src/features/orders/api.ts`). The board moves the ticket to Cancelled optimistically, then rolls it back and raises an error toast when the write fails. Raise that constant to 1 if you want to demo the rollback on purpose.
 

@@ -12,6 +12,8 @@ export const DEMO = {
   /** Latin-only name for the share-preview image, whose default font has no Arabic. */
   latinName: "Demo Café",
   url: "https://cafe.demos.desertlaunch.dev",
+  /** The staff side. The demo bar's switch opens it from every public page. */
+  adminPath: "/admin",
   /** Language of the bar and the metadata. Typed as the union so the shared
    *  code that handles both languages stays identical in every demo. */
   lang: "en" as DemoLang,
@@ -24,7 +26,7 @@ export const DEMO = {
     "A working demo of a café website with its bar view, by Desert Launch: a 32-item menu with options, order-ahead for pickup or delivery with a time slot, and the ticket board staff run the day from. Fictional café, sample data.",
   /** Plain statement that the business is invented. */
   fiction:
-    "A fictional business: the names, prices, address and phone numbers are invented, and the data is sample data that resets on refresh.",
+    "A fictional business: the names, prices, address and phone numbers are invented, and the data is sample data. What a visitor changes is saved only in their own browser, for the day.",
   features: [
       "32-item menu across six categories with size, milk and extras",
       "Five-step checkout: pickup or delivery, details, time slot, review, confirmation",

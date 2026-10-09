@@ -98,7 +98,7 @@ export function AdminNav({ onNavigate }: { onNavigate?: () => void }) {
           {reset.isPending ? "Resetting…" : "Reset demo data"}
         </Button>
         <p className="px-2 text-2xs leading-snug text-chaff-400">
-          Everything lives in memory. A hard refresh reseeds the day.
+          Changes are saved in this browser for today. Reset puts back the seeded day.
         </p>
       </div>
     </div>

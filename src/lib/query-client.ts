@@ -1,9 +1,9 @@
 import { QueryClient } from "@tanstack/react-query";
 
 /**
- * The demo's data lives in memory, but every read goes through TanStack Query
- * so loading, error and invalidation behave exactly as they would against a
- * real API. Retries are off so the deliberate failure path in
+ * The demo's data lives in this browser, but every read goes through
+ * TanStack Query so loading, error and invalidation behave exactly as they
+ * would against a real API. Retries are off so the deliberate failure path in
  * `cancelOrder` surfaces immediately instead of being silently retried.
  */
 export function makeQueryClient(): QueryClient {
